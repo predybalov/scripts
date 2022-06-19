@@ -73,7 +73,7 @@ AllowedIPs = 0.0.0.0/0
 Endpoint = ${ip_address}:55555
 EOF
 
-  let counter++
+  counter=$(( counter + 1 ))
 done
 
 # Enable and start wireguard service
