@@ -37,7 +37,7 @@ touch ${wg}/wg0.conf
 server_name=$1
 shift
 
-interface_name=$(ip a |grep BROADCAST |awk '{print $2}' |tr -d :)
+interface_name=$(ls -l /sys/class/net | grep -v virtual |tail -n 1 | awk '{print $9}')
 
 cat << EOF > ${wg}/wg0.conf
 [Interface]
