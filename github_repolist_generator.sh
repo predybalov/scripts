@@ -19,7 +19,7 @@ for page in {1..2}; do
     -H "Accept: application/vnd.github+json" \
     -H "Authorization: Bearer ${GITHUB_TOKEN}" \
     -H "X-GitHub-Api-Version: 2022-11-28" \
-    --url "https://api.github.com/orgs/<ORGANISATION_NAME>/repos?per_page=100&page=${page}" | \ 
+    --url "https://api.github.com/orgs/<ORGANIZATION_NAME>/repos?per_page=100&page=${page}" | \ 
     jq -r '.[] | .full_name + " " + .updated_at + " " + .svn_url + " " + .description' >> ${list_file}
 done
 
