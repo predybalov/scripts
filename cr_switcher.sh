@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 registry=$1
-keydir="/home/gelios/Settings/yandex_container_registries_configs"
+keydir="<path to folder with keys>"
 
 GREEN="\e[32m"
 RED="\e[31m"
